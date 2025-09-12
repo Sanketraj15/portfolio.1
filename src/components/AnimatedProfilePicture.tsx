@@ -1,11 +1,10 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import profileImage from 'figma:asset/a38de5ad776d0cd2ba2743f6d6da5fea731e31c4.png';
 
 // 🖼️ SANKET RAJ'S PROFILE PICTURE
-// Using direct Google Drive URL for your profile photo
-// Original link: https://drive.google.com/file/d/1N9pTZ68grEniHpSXIXlkiRJ0V1UsGrYh/view?usp=drive_link
-// Converted to direct download URL for web compatibility:
-const PROFILE_IMAGE_URL = "https://drive.google.com/uc?export=view&id=1N9pTZ68grEniHpSXIXlkiRJ0V1UsGrYh";
+// Using your professional headshot with 3D geometric background elements
+// Perfect match for your 3D modeller & game developer portfolio theme!
 
 interface AnimatedProfilePictureProps {
   imageUrl?: string;
@@ -13,7 +12,7 @@ interface AnimatedProfilePictureProps {
 }
 
 export function AnimatedProfilePicture({ 
-  imageUrl = PROFILE_IMAGE_URL,
+  imageUrl = profileImage,
   altText = "Sanket Raj - 3D Modeller & Game Developer"
 }: AnimatedProfilePictureProps = {}) {
   return (
