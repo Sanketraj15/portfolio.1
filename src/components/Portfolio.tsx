@@ -29,39 +29,38 @@ export function Portfolio({ isAdminMode }: PortfolioProps) {
   const [projects, setProjects] = useState<Project[]>([
     {
       id: '1',
-      title: 'Sci-Fi Character Model',
-      description: 'High-poly character model created for a futuristic game concept. Features detailed armor, weapons, and realistic texturing.',
-      category: '3D Modeling',
-      image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop',
-      technologies: ['Blender', 'Substance Painter', 'ZBrush'],
+      title: 'Salary System | Restaurant Billing Assistant',
+      description: 'Integrated restaurant billing system with chatbot functionality. Created an easy-to-use restaurant billing solution with recommendations and smooth user experience.',
+      category: '3D Game',
+      image: 'https://images.unsplash.com/photo-1626207887298-da2fc1f50e82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmRsZXNzJTIwcnVubmVyJTIwZ2FtZXxlbnwxfHx8fDE3NTc4NjQzODN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      technologies: ['React', 'Java', 'C#', 'Steam Android'],
       featured: true
     },
     {
       id: '2',
-      title: 'Platformer Adventure',
-      description: 'A 2D platformer game featuring hand-drawn animations and engaging level design. Complete with sound effects and music.',
+      title: 'Business-up One Running Game',
+      description: 'Endless runner game with smooth character controls, dynamic animations, and engaging scoring system. Designed and developed from concept to completion.',
       category: '2D Game',
-      image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop',
-      technologies: ['Unity 2D', 'C#', 'Photoshop'],
-      githubUrl: 'https://github.com',
+      image: 'https://images.unsplash.com/photo-1728908053208-b7403ce54b6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmRsZXNzJTIwcnVubmVyJTIwZ2FtZXxlbnwxfHx8fDE3NTc4NjQzODN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      technologies: ['Java', 'C#', 'Unity', 'Game Design'],
       featured: true
     },
     {
       id: '3',
-      title: 'Architectural Walkthrough',
-      description: 'Interactive 3D visualization of a modern building with realistic lighting and materials.',
+      title: 'System Analysis Dashboard',
+      description: 'Comprehensive system analysis and management dashboard for IEMA R&D. Features real-time data visualization and process optimization tools.',
       category: '3D Game',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop',
-      technologies: ['Unity 3D', 'Blender', 'C#'],
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      technologies: ['System Analysis', 'Database Management', '3D FIT Database'],
       liveUrl: 'https://example.com'
     },
     {
       id: '4',
-      title: 'Character Animation Reel',
-      description: 'Showcase of various character animations including walk cycles, combat moves, and emotional expressions.',
-      category: 'Animation',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop',
-      technologies: ['Maya', 'Blender', 'After Effects']
+      title: '3D Modeling Reality Projects',
+      description: 'Collection of 3D modeling projects showcasing reality-based designs and technical implementations for research applications.',
+      category: '3D Modeling',
+      image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop',
+      technologies: ['3D Modelling Reality', 'Blender', 'Technical Design']
     }
   ]);
 
@@ -148,9 +147,9 @@ export function Portfolio({ isAdminMode }: PortfolioProps) {
     <section id="portfolio" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4">Portfolio</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent">Portfolio</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of my latest work in 3D modeling, animation, and game development.
+            A showcase of my projects in system analysis, game development, 3D modeling, and full stack development solutions.
           </p>
         </div>
 

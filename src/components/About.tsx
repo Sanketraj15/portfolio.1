@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Building2, GraduationCap, Calendar, Users, Target, Award } from 'lucide-react';
+import { Building2, GraduationCap, Calendar, Users, Target, Award, BadgeCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function About() {
@@ -18,7 +18,7 @@ export function About() {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate about bringing creative visions to life through system analysis, 3D modeling, animation, and interactive experiences.
+           As an AR/VR Developer, I specialize in bridging the gap between imagination and reality. With a 3+ year track record of creating dynamic digital solutions, I combine the artistic precision of 3D modeling, animation, and light baking with a robust technical foundation in Java, HTML, and CSS. I am driven by the challenge of building the next generation of interactive content and am seeking to lend my skills to ambitious developmental initiatives.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export function About() {
             </Card>
           </motion.div>
 
-          {/* Expertise & Skills */}
+          {/* Education */}
           <motion.div
             className="lg:col-span-2"
             initial={{ opacity: 0, x: -30 }}
@@ -97,52 +97,45 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Award className="h-5 w-5 mr-2 text-primary" />
-                  Expertise & Skills
+                  <GraduationCap className="h-5 w-5 mr-2 text-primary" />
+                  Education
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
-                <div className="grid gap-6">
-                  <div>
-                    <h4 className="font-medium mb-3 flex items-center gap-2">
-                      🎯 System Analysis & Design
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Expertise in analyzing complex systems, designing efficient workflows, and implementing technological solutions for research environments.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">System Architecture</Badge>
-                      <Badge variant="secondary">Process Optimization</Badge>
-                      <Badge variant="secondary">Technical Documentation</Badge>
+                <div className="space-y-4">
+                  {/* B.Tech */}
+                  <div className="p-4 bg-accent/30 rounded-lg border-l-4 border-primary">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <GraduationCap className="h-5 w-5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-medium text-sm mb-1">B.Tech University of Engineering & Management</h4>
+                        <p className="text-xs text-muted-foreground mb-2">Kolkata (UEMK)</p>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Calendar className="h-3 w-3 text-muted-foreground" />
+                          <span className="text-xs text-muted-foreground">Aug 2021 - Jun 2025</span>
+                          <Badge variant="outline" className="text-xs"></Badge>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  <div>
-                    <h4 className="font-medium mb-3 flex items-center gap-2">
-                      🎨 3D Modeling & Animation
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Creating detailed 3D models and animations for research applications, games, and interactive experiences.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Blender</Badge>
-                      <Badge variant="secondary">Maya</Badge>
-                      <Badge variant="secondary">Character Animation</Badge>
-                      <Badge variant="secondary">VFX</Badge>
+                  {/* Previous Education */}
+                  <div className="grid gap-3">
+                    <div className="p-3 bg-accent/20 rounded-lg">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h5 className="font-medium text-xs mb-1">Class 12 | MPS School, Harnaut</h5>
+                          <span className="text-xs text-muted-foreground">April 2020 - May 2021</span>
+                        </div>
+                        <Badge variant="secondary" className="text-xs"></Badge>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-medium mb-3 flex items-center gap-2">
-                      🎮 Game Development
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Developing engaging 2D and 3D games using Unity, from concept to completion with full C# scripting capabilities.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Unity 2D/3D</Badge>
-                      <Badge variant="secondary">C# Scripting</Badge>
-                      <Badge variant="secondary">Game Design</Badge>
+                    
+                    <div className="p-3 bg-accent/20 rounded-lg">
+                      <h5 className="font-medium text-xs mb-1">Class 10 | St. Paul's English School, Sarthai</h5>
+                      <span className="text-xs text-muted-foreground">March 2018 - April 2019</span>
                     </div>
                   </div>
                 </div>
@@ -150,7 +143,7 @@ export function About() {
             </Card>
           </motion.div>
 
-          {/* Education - Moved to side and smaller */}
+          {/* Certifications */}
           <motion.div
             className="lg:col-span-1"
             initial={{ opacity: 0, x: 30 }}
@@ -162,34 +155,35 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardHeader>
                 <CardTitle className="flex items-center text-lg">
-                  <GraduationCap className="h-5 w-5 mr-2 text-primary" />
-                  Education
+                  <BadgeCheck className="h-5 w-5 mr-2 text-primary" />
+                  Certifications
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
                 <div className="space-y-4">
-                  <div className="text-center p-4 bg-accent/30 rounded-lg">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <GraduationCap className="h-6 w-6 text-primary" />
-                    </div>
-                    <h4 className="font-medium text-sm mb-1">University of Engineering & Management</h4>
-                    <p className="text-xs text-muted-foreground mb-1">Kolkata (UEMK)</p>
-                    <Badge variant="outline" className="text-xs">Graduate 2025</Badge>
+                  <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <h5 className="font-medium text-xs mb-2 text-blue-700 dark:text-blue-300">Technical Support Basics</h5>
+                    <p className="text-xs text-muted-foreground mb-2">Coursera</p>
+                    <ul className="text-xs text-muted-foreground space-y-1">
+                      <li>• IT support fundamentals</li>
+                      <li>• Troubleshooting strategies</li>
+                      <li>• Computer systems administration</li>
+                    </ul>
                   </div>
                   
-                  <div className="space-y-2">
-                    <h5 className="font-medium text-sm">Academic Focus:</h5>
+                  <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
+                    <h5 className="font-medium text-xs mb-2 text-purple-700 dark:text-purple-300">Artificial Intelligence Fundamentals</h5>
+                    <p className="text-xs text-muted-foreground mb-2">IBM SkillsBuild</p>
                     <ul className="text-xs text-muted-foreground space-y-1">
-                      <li>• Engineering Principles</li>
-                      <li>• Digital Media Technology</li>
-                      <li>• Software Development</li>
-                      <li>• System Design</li>
+                      <li>• AI principles & concepts</li>
+                      <li>• Machine Learning basics</li>
+                      <li>• Real-world applications</li>
                     </ul>
                   </div>
                   
                   <div className="pt-3 border-t">
                     <p className="text-xs text-muted-foreground text-center">
-                      Strong foundation in engineering with specialization in digital technologies and creative applications.
+                      Continuously expanding knowledge in emerging technologies and industry best practices.
                     </p>
                   </div>
                 </div>

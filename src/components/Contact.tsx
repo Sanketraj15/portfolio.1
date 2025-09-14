@@ -4,7 +4,8 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, Instagram, Facebook, MessageCircle, X } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
 import { motion } from 'motion/react';
 
@@ -15,6 +16,7 @@ export function Contact() {
     subject: '',
     message: ''
   });
+  const [isPhoneModalOpen, setIsPhoneModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,16 +37,19 @@ export function Contact() {
   };
 
   const handlePhoneClick = () => {
+    setIsPhoneModalOpen(true);
+  };
+
+  const handleCallClick = () => {
     const phoneNumber = '+916201325012';
+    window.location.href = `tel:${phoneNumber}`;
+    setIsPhoneModalOpen(false);
+  };
+
+  const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/916201325012`;
-    const callUrl = `tel:${phoneNumber}`;
-    
-    const choice = window.confirm('Choose your action:\nOK = Call\nCancel = WhatsApp');
-    if (choice) {
-      window.location.href = callUrl;
-    } else {
-      window.open(whatsappUrl, '_blank');
-    }
+    window.open(whatsappUrl, '_blank');
+    setIsPhoneModalOpen(false);
   };
 
   const socialLinks = [
@@ -290,6 +295,74 @@ export function Contact() {
             </Card>
           </motion.div>
         </div>
+
+        {/* Phone Options Modal */}
+        <Dialog open={isPhoneModalOpen} onOpenChange={setIsPhoneModalOpen}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <Phone className="h-5 w-5 text-primary" />
+                Choose Your Action
+              </DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4 mt-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button
+                  onClick={handleCallClick}
+                  className="w-full justify-start group hover:scale-105 transition-all duration-300"
+                  variant="outline"
+                >
+                  <div className="p-2 rounded-full bg-green-100 dark:bg-green-900/30 mr-3">
+                    <Phone className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-medium">Call Me</p>
+                    <p className="text-sm text-muted-foreground">+91 6201325012</p>
+                  </div>
+                </Button>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+              >
+                <Button
+                  onClick={handleWhatsAppClick}
+                  className="w-full justify-start group hover:scale-105 transition-all duration-300"
+                  variant="outline"
+                >
+                  <div className="p-2 rounded-full bg-green-100 dark:bg-green-900/30 mr-3">
+                    <MessageCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-medium">WhatsApp Me</p>
+                    <p className="text-sm text-muted-foreground">Quick message</p>
+                  </div>
+                </Button>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+              >
+                <Button
+                  onClick={() => setIsPhoneModalOpen(false)}
+                  className="w-full justify-center hover:scale-105 transition-all duration-300"
+                  variant="ghost"
+                >
+                  <X className="h-4 w-4 mr-2" />
+                  Cancel
+                </Button>
+              </motion.div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );

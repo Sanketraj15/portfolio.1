@@ -6,26 +6,26 @@ import { Box, Palette, Gamepad2, Code } from 'lucide-react';
 export function Skills() {
   const skillCategories = [
     {
-      title: "3D Modeling & Rendering",
-      icon: <Box className="h-5 w-5" />,
+      title: "Programming Languages",
+      icon: <Code className="h-5 w-5" />,
       skills: [
-        { name: "Blender", level: 90 },
-        { name: "Maya", level: 80 },
-        { name: "3ds Max", level: 75 },
-        { name: "ZBrush", level: 70 }
+        { name: "Java", level: 85 },
+        { name: "HTML", level: 90 },
+        { name: "CSS", level: 85 },
+        { name: "C#", level: 80 }
       ],
-      tools: ["Substance Painter", "Substance Designer", "Marmoset Toolbag", "V-Ray", "Arnold"]
+      tools: ["IntelliJ IDEA", "Visual Studio Code", "Eclipse", "Git"]
     },
     {
-      title: "Animation & VFX",
-      icon: <Palette className="h-5 w-5" />,
+      title: "3D Modeling & Technical",
+      icon: <Box className="h-5 w-5" />,
       skills: [
-        { name: "Character Animation", level: 85 },
-        { name: "Motion Graphics", level: 80 },
-        { name: "Visual Effects", level: 75 },
-        { name: "Rigging", level: 70 }
+        { name: "3D Modelling Reality", level: 90 },
+        { name: "3D FIT Database", level: 85 },
+        { name: "Management System", level: 80 },
+        { name: "System Analysis", level: 85 }
       ],
-      tools: ["After Effects", "Premiere Pro", "DaVinci Resolve", "Cinema 4D"]
+      tools: ["Blender", "Maya", "Database Systems", "Analysis Tools"]
     },
     {
       title: "Game Development",
@@ -33,21 +33,21 @@ export function Skills() {
       skills: [
         { name: "Unity 3D", level: 85 },
         { name: "Unity 2D", level: 90 },
-        { name: "C# Scripting", level: 80 },
-        { name: "Game Design", level: 85 }
+        { name: "Game Design", level: 85 },
+        { name: "Character Controls", level: 80 }
       ],
-      tools: ["Unity Hub", "Visual Studio", "Git", "Blender to Unity Pipeline"]
+      tools: ["Unity Hub", "Visual Studio", "C# Scripting", "Android Studio"]
     },
     {
-      title: "Technical Skills",
-      icon: <Code className="h-5 w-5" />,
+      title: "Frontend & Web Development",
+      icon: <Palette className="h-5 w-5" />,
       skills: [
-        { name: "C#", level: 80 },
-        { name: "Python", level: 70 },
-        { name: "JavaScript", level: 65 },
-        { name: "Git/Version Control", level: 75 }
+        { name: "React", level: 80 },
+        { name: "Frontend Design", level: 85 },
+        { name: "Responsive Design", level: 80 },
+        { name: "UI/UX Principles", level: 75 }
       ],
-      tools: ["Visual Studio Code", "GitHub", "Unity Collaborate", "Perforce"]
+      tools: ["React", "Steam Android", "Responsive Frameworks", "Design Tools"]
     }
   ];
 
@@ -55,9 +55,9 @@ export function Skills() {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4">Skills & Expertise</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent">Skills & Expertise</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for creating immersive 3D experiences and interactive applications.
+            Full stack development expertise with specialized skills in 3D modeling, system analysis, and innovative digital solutions.
           </p>
         </div>
 
